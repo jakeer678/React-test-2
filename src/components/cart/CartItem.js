@@ -3,15 +3,14 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { productContext } from "../../store/ContextStore";
 import "./Cart.css";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
-import {  Dialog } from "@mui/material";
+import { Dialog } from "@mui/material";
 import CartList from "./CartList";
-
 
 const CartItem = () => {
   const { open, largeProduct, handleClose, handleClickOpen } =
     useContext(productContext);
-  const quantity = largeProduct?.length 
-  console.log(quantity,"ppppp")
+  const quantity = largeProduct?.length;
+  console.log(quantity, "ppppp");
   const total = largeProduct?.reduce((acc, cur) => {
     return acc + cur.price;
   }, 0);

@@ -23,22 +23,28 @@ const ContextProvider = (props) => {
 
   const setProduct = async () => {
     const response = await axios.get(
-      `https://crudcrud.com/api/e0a5ea68ff404417a44787e7ae235bc4/cart`
+      "https://crudcrud.com/api/00910becead446acb16711137960bff3/cart"
     );
     console.log(response.data);
     setlargeProduct(response.data);
   };
 
-  const addTocart = async (item) => {
+  const addTocart = async (productDetail) => {
     const response = await axios.post(
-      `https://crudcrud.com/api/e0a5ea68ff404417a44787e7ae235bc4/cart`,
-      item
+      "https://crudcrud.com/api/00910becead446acb16711137960bff3/cart",
+      productDetail
     );
 
-    console.log(response.data);
+    console.log(response.data, "fffff");
+    setlargeProduct([...largeProduct, productDetail]);
+  };
 
-    const updated = [...largeProduct, item];
-    setlargeProduct(updated);
+  const removeProduct = async () => {
+    const response = await axios.delete(
+      "https://crudcrud.com/api/00910becead446acb16711137960bff3/cart"
+    );
+    console.log(response.data);
+    setProduct();
   };
 
   const addProductList = (item) => {
