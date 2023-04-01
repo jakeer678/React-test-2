@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5rem;
+}
+.container label {
+   margin-left: 1rem;
+   margin-right: 1rem;
+}
+.container input {
+    width: 11rem;
+   margin-left: 1rem;
+ 
+    margin-right: 1rem;
+ 
+}
+.sizes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.sizes input {
+    width: 2.5rem;
+}
+.shoePrice input{
+    width: 4rem;
+}

@@ -1,0 +1,50 @@
+.listItems {
+    list-style: none;
+    display: flex;
+    justify-items: stretch;
+   
+}
+.name {
+    border: 2px solid black;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.description {
+    border: 2px solid black;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.price {
+    border: 2px solid black;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.sizeList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.large {
+ 
+
+    margin-top: 1rem;
+}
+.medium {
+
+    
+  
+    margin-top: 1rem;
+}
+.small {
+    margin-top: 1rem;
+   
+}
