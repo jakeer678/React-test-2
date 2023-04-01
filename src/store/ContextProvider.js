@@ -39,9 +39,9 @@ const ContextProvider = (props) => {
     setlargeProduct([...largeProduct, productDetail]);
   };
 
-  const removeProduct = async () => {
+  const removeProduct = async (_id) => {
     const response = await axios.delete(
-      "https://crudcrud.com/api/00910becead446acb16711137960bff3/cart"
+      `https://crudcrud.com/api/00910becead446acb16711137960bff3/cart/${_id}`
     );
     console.log(response.data);
     setProduct();
@@ -66,6 +66,7 @@ const ContextProvider = (props) => {
     handleClose: handleClose,
     addTocart: addTocart,
     open: open,
+    removeProduct: removeProduct,
     addProductList: addProductList,
     handleClickOpen: handleClickOpen,
     // mediumProduct: mediumProduct,
